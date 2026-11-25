@@ -1,9 +1,5 @@
 # Grain morphology and dendrite control (C08)
 
-> Workspace folder: `e08-phase-field-microstructure` · Suggested GitHub repository: `phase-field-grain-growth`
-> Epic: E08 · Weeks: W31–W34 · Evidence level: **A**
-> Master specification: [`CASES.md`](https://github.com/ahmadishamulayadyakmal/metallurgy-project/blob/main/CASES.md) §4 · Download the papers: [`JOURNALS.md`](https://github.com/ahmadishamulayadyakmal/metallurgy-project/blob/main/JOURNALS.md)
-
 ## Industrial problem
 
 As-cast grain size and dendrite arm spacing set downstream strength and toughness; weld and additive-manufacturing thermal histories produce microstructures a plant cannot afford to trial-and-error.
@@ -12,12 +8,9 @@ As-cast grain size and dendrite arm spacing set downstream strength and toughnes
 
 ## Data (no plant data)
 
-Open data only: PRISMS-PF benchmark cases (R22, open source) and the analytical grain-growth law `d^n - d0^n = Kt` (R24). Thermal fields come from C07, not from a plant. Evidence level A.
+Open data only: PRISMS-PF benchmark cases (R22, open source) and the analytical grain-growth law `d^n - d0^n = Kt` (R24). Thermal fields come from C07, not from a plant.
 
-> The author cannot supply factory data. This project uses **only open datasets and
-> credible peer-reviewed journals**. If this is a B-level case, the case report
-> must contain the exact disclaimer from `CASES.md` §1 and must **never** claim
-> plant validation.
+> Only open datasets and published literature are used. No plant or proprietary data are held here; plant numbers quoted from papers are external literature, not independently reproduced results.
 
 ## Tool chain
 
@@ -26,15 +19,10 @@ Phase-field (in-house + PRISMS-PF comparison), coupling from C07 thermal history
 ## Journal references
 
 - **R21** — solidification microstructure bridge.
-- **R22** — PRISMS-PF framework and cross-code comparator.
+- **R22** ([DOI](https://doi.org/10.1038/s41524-020-0298-5)) — PRISMS-PF framework and cross-code comparator.
 - **R23** — phase-field model review.
 - **R24** — analytical grain-growth law for verification (compound: 2 papers).
 - **R26** — JMAK kinetics (compound: 2 papers).
-
-Each reference above is listed with its DOI or stable URL, access status and
-manual download route in [`JOURNALS.md`](https://github.com/ahmadishamulayadyakmal/metallurgy-project/blob/main/JOURNALS.md) §4, and in the shared
-BibTeX library `papers/references.bib`. Do not cite a paper you have not been
-able to obtain; if it is inaccessible, record that in `JOURNALS.md` §8.
 
 ## Deliverables
 
@@ -48,41 +36,13 @@ Recovered growth exponent matches the analytical law within tolerance; mesh conv
 
 2D, idealised binary alloy. No plant microstructure images are used.
 
-## Definition of Done
+## Repository layout
 
-1 merged PR · green tests · 1 new artefact · 1 README paragraph · 1 sprint note
-`docs/sprints/wNN.md` · tag `wNN`. Before the case tag `c08` is created,
-this README must contain all six sections: Industrial problem, Data (no plant
-data), Tool chain, Journal references, Validation & claims, Limitations.
+- `README.md` — case summary, data policy, method, results and limitations.
+- `CONTRIBUTING.md` — how to propose changes.
+- `docs/index.md` — documentation map.
+- `docs/model_card.md` and `docs/vv_template.md` — reporting templates.
+- `.github/workflows/ci.yml` — automated checks.
 
-## Repository skeleton
-
-Shared files: `CONTRIBUTING.md` (sprint contract), `.github/` (issue, PR and
-CI templates), `docs/sprints/wNN.md`, `docs/vv_template.md` and
-`docs/model_card.md`. `CASES.md`, `JOURNALS.md` and `REPOSITORIES.md` are in a
-separate planning repository; their links above remain valid after this folder
-is pushed as its own repository.
-
-The real industrial case dossier is in `case/`: `README.md` (full case card),
-`evidence.md`, `sources.md` and `week_plan.md`.
-
-## Repository status and GitHub Desktop
-
-This folder is already a Git repository on `main`, pushed to GitHub as
-`phase-field-grain-growth` with an SSH `origin`. In GitHub Desktop, choose **Add local
-repository** and select this folder; do not clone into the same path.
-
-```bash
-git status --short --branch
-git pull --rebase origin main
-git push origin main
-```
-
-Weekly work follows `CONTRIBUTING.md`: one PR, green tests, one artefact, one
-README paragraph, `docs/sprints/wNN.md`, tag `wNN`. Tag `c08` only after
-all six README sections are complete.
-
-
-## Language
-
-All artefacts in this repository are written in **English**.
+Only open data and published literature are used. No plant or proprietary data
+are included. All artefacts are written in English.
